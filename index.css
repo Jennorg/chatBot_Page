@@ -1,180 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  --color-rojo: #E42223;
-  --color-blanco-texto: #fafafa;
-  --color-negro-fondo: #212121;
+  --primary: #d6a864;
+  --secondary: #8c674b;
+  --card-color: #2c2f2c;
+  --accent: #a27b5c;
+  --background: #151814;
+  --text-color: #f5f5f5;
+  --banner-primary: #30475e;
+  --banner-secondary: #6a994e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
-  font-family: Roboto, Arial, Helvetica;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-:target {
-  scroll-margin-top: 80px;
-}
-
-h1, h2, h3 {
-  color: var(--color-rojo);
-}
-
-section {
-  min-height: 90dvh;
-  display: grid;
-  grid-template-rows: 80px  repeat(2,1fr);
-  justify-self: top; 
-  margin: 30px 0;
-}
-
-section ul li:hover {
-  transform: scale(1.1);
-}
-
-header {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  padding: 15px;
-  background-color: var(--color-rojo);
-  position: fixed;
-}
-
-header * {
-  color: var(--color-blanco-texto);
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: grid;
-  grid-template-columns: 5;
-  place-items: Top;
-  position: relative;
-  max-width: 100dvw;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto, Arial, Helvetica;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
   min-height: 100dvh;
-  background-color: #fff;
-  
-}
-
-main {
-  column-span: all;
-  padding: 30px;
-}
-
-main h2 {
-  font-weight: bold;
-  font-size:x-large;
-  color: var(--color-rojo);
-}
-
-/* Menu section */
-
-#menu_Section {
-  margin-top: 80px;
-  max-width: 100%;
-}
-
-#menu_Section h2 {
-  grid-row: span 1;
-}
-
-#menu_List {
-  grid-row: span 2;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px 0;
-}
-
-#menu_List li {
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  align-items: center;
-  max-width: 350px;
-  border-radius: 18px;
-  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  gap: 15px;
 }
 
-#menu_List li img {
-  border-radius: 15px;
+.hero {
   width: 100%;
-}
-
-#menu_List p {
-  text-align: center;
-}
-
-/* Socios Section */
-
-#socios_Section {
-  max-width: 100%;
-}
-
-#socios_Container {
-  grid-row: span 2;
+  height: 70vh;
+  background-image: url("./img/hero-pizza.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+
+.hero h1 {
+  color: var(--primary);
+  margin-top: 100px;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.hero .title {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navbar {
+  height: 50px;
+  line-height: 50px;
+}
+
+.list {
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.item {
+  color: var(--secundary);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.banner {
+  margin-top: 40px;
   width: 100%;
-  gap: 30px;
-  margin: 0;
-}
-
-#socios_Container li {
-  display: grid;
-  place-items: center;
-  padding: 15px;
-  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 18px;
-  min-height: 200px;
-  max-width: 300px;
-}
-
-#socios_Container h3 {
-  color: var(--color-rojo);
-}
-
-#socios_Container li img {
-  max-width: 100%;
-}
-
-/* Nos escargamos de - section */
-
-#weDo_Section {
-  max-width: 100%;
-  margin: 30px 0;
-}
-
-#weDo_List {
-  margin: 10px 0;
-}
-
-#weDo_List li {
+  height: 300px;
+  border-radius: 20px;
+  background-color: var(--banner-secondary);
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-#weDo_List li img {
-  margin-right: 4px;
+.banner {
+  color: var(--background);
+  font-size: 3rem;
+  padding: 0 2rem;
+  text-align: center;
+  font-weight: 500;
 }
 
+.accent {
+  color: var(--text-color);
+}
+
+.main-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: var(--secondary);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--card-color);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  height: 120px;
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.card-description {
+  margin-top: 5px;
+  font-size: 0.75rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+.bg-banner {
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--banner-primary);
+}
 
 #whatsApp_Button {
-  position: fixed;
+  position: absolute;
   bottom: 15px;
   right: 15px;
   cursor: pointer;
 }
 
-#whatsApp_Button:hover {  
+#whatsApp_Button:hover {
   transform: scale(1.2);
   transition: transform 0.2s ease-in-out;
 }
@@ -184,10 +201,11 @@ main h2 {
 }
 
 footer {
-  display: grid;
-  place-items: center;
-}
-
-footer p{
-  font-size: small;
+  margin-top: 40px;
+  height: 100px;
+  background-color: var(--card-color);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

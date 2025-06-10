@@ -1,144 +1,307 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MALJUT PIZZAS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./src/assets/reset.css">
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <header>
-      <h1><a href="#">MALJUT PIZZAS</a></h1>
-      <h2><a href="#menu_Section">Menu</a></h2>
-      <h2><a href="#socios_Section">Socios</a></h2>
-  </header>
-  <main>
-    <section id="menu_Section">
-      <h2>Menu</h2>
-      <ul id="menu_List">
-        <li>
-          <img src="./src//img/pizza.jpg" alt="Pizza">
-          <h3>Pizza Generica</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptatum quisquam eveniet facilis distinctio</p>
-        </li>      
-        <li>
-          <img src="./src//img/pizza.jpg" alt="Pizza">
-          <h3>Pizza Generica</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptatum quisquam eveniet facilis distinctio</p>
-        </li>
-        <li>
-          <img src="./src//img/pizza.jpg" alt="Pizza">
-          <h3>Pizza Generica</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptatum quisquam eveniet facilis distinctio</p>
-        </li>
-        <li>
-          <img src="./src//img/pizza.jpg" alt="Pizza">
-          <h3>Pizza Generica</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptatum quisquam eveniet facilis distinctio</p>
-        </li>
-        <li>
-          <img src="./src//img/pizza.jpg" alt="Pizza">
-          <h3>Pizza Generica</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptatum quisquam eveniet facilis distinctio</p>
-        </li>
-        <li>
-          <img src="./src//img/pizza.jpg" alt="Pizza">
-          <h3>Pizza Generica</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel voluptatum quisquam eveniet facilis distinctio</p>
-        </li>
-      </ul>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maljut Pizzas</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="hero">
+        <h1>
+          Bienvenido a <span class="title">Maljut Pizzas</span>, donde la pizza
+          sabe mejor
+        </h1>
+      </header>
 
-    <section id="socios_Section">
-        <h2>Socios</h2>
-        <ul id="socios_Container">            
-            <li>
-              <img src="./src/img/yummi_Logo.png" alt="Yummi Rides">
-              <h3>Yummi Rides</h3>
-              <p>Nuestro aliado principal para el servicio Delivery</p>
-            </li>
-            <li>
-              <img src="./src/img/yummi_Logo.png" alt="Yummi Rides">
-              <h3>Yummi Rides</h3>
-              <p>Nuestro aliado principal para el servicio Delivery</p>
-            </li>
-            <li>
-              <img src="./src/img/yummi_Logo.png" alt="Yummi Rides">
-              <h3>Yummi Rides</h3>
-              <p>Nuestro aliado principal para el servicio Delivery</p>
-            </li>
-            <li>
-              <img src="./src/img/yummi_Logo.png" alt="Yummi Rides">
-              <h3>Yummi Rides</h3>
-              <p>Nuestro aliado principal para el servicio Delivery</p>
-            </li>
-            <!-- <li>
-              <img src="" alt="">
-              <h2>Influencers estudiantiles para promoción local.</h2>
+      <main class="container">
+        <nav class="navbar">
+          <ul class="list">
+            <li><a class="item" href="#menu">Menú</a></li>
+            <li><a class="item" href="#promociones">Promociones</a></li>
+            <li><a class="item" href="#sucursales">Sucursales</a></li>
+            <li><a class="item" href="#pago">Métodos de Pago</a></li>
+            <li><a class="item" href="#">Sobre nosotros</a></li>
+            <li><a class="item" href="#">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <section class="banner">
+          <h2 class="subtitle-banner">
+            <span class="accent">Solo por Hoy</span> 🍕 1 Pizza grande + 🍗 6
+            Alitas BBQ + 🥤 2 Jugos naturales 💰 Solo
+            <span class="accent">$10</span>
+          </h2>
+        </section>
+
+        <section id="menu" class="main-section">
+          <h2 class="subtitle">Menú</h2>
+
+          <div class="card-container">
+            <article class="card">
+              <img
+                src="./img/pizza.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Margarita</h3>
+                <p class="card-description">
+                  Salsa de tomate, mozzarella y albahaca – $5
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/pizza.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Pepperoni</h3>
+                <p class="card-description">
+                  Mozzarella, salsa de tomate y pepperoni – $6
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/pizza.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Hawaiana</h3>
+                <p class="card-description">Jamón, piña y queso – $6.5</p>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/pizza.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">4 Quesos</h3>
+                <p class="card-description">
+                  Mozzarella, parmesano, gouda y azul – $7
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/pizza.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Maljut Especial</h3>
+                <p class="card-description">
+                  Pollo, maíz, tocineta, champiñones – $7.5
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/pizza.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Carnívora</h3>
+                <p class="card-description">
+                  Salchichón, jamón, carne molida, tocineta – $8
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/pizza.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Veggie</h3>
+                <p class="card-description">
+                  Tomate, pimentón, cebolla, aceitunas, maíz – $6.5
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/alitas-de-pollo.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Alitas BBQ (6 piezas) – $4</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/pan-casero-con-ajo-.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Pan de Ajo (4 piezas) – $2.5</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/patatas-fritas.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Papas Fritas – $3</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/gaseosas.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Refresco 1.5L – $2</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/jugos.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Jugo natural – $2.5</h3>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="./img/agua.jpg"
+                alt="Imagen de pizza"
+                class="card-img"
+              />
+              <div class="card-content">
+                <h3 class="card-title">Agua mineral – $1</h3>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="promociones" class="main-section">
+          <h2 class="subtitle">Promociones</h2>
+
+          <div class="card-container bg-banner">
+            <article class="content">
+              <h3 class="card-title">Dúo Maljut</h3>
+              <p class="card-description">
+                🍕 2 Pizzas medianas clásicas + 1 Refresco 1.5L 💰 Solo $12
+              </p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">Combo Familiar</h3>
+              <p class="card-description">
+                🍕 1 Pizza grande + 🍗 6 Alitas BBQ + 🥤 2 Jugos naturales 💰
+                Solo $10
+              </p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">Pareja Feliz</h3>
+              <p class="card-description">
+                🍕 2 Pizzas personales + 1 Pan de ajo + 1 Refresco 💰 Solo $8
+              </p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">Martes Locos</h3>
+              <p class="card-description">
+                📅 Solo los martes: 🍕 Pizza grande de Pepperoni o Hawaiana 💰 A
+                mitad de precio ($4)
+              </p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">2x1 Veggie Friday</h3>
+              <p class="card-description">
+                🌱 Todos los viernes: Pide una Pizza Veggie y te damos otra
+                ¡gratis!
+              </p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">Delivery Gratis</h3>
+              <p class="card-description">
+                🛵 Si tu pedido supera los $15, ¡el delivery es gratis! 📍
+                Válido solo en Puerto Ordaz.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="sucursales" class="main-section">
+          <h2 class="subtitle">Sucursales</h2>
+
+          <div class="card-container bg-banner">
+            <article class="content">
+              <h3 class="card-title">📍Sucursal Unare</h3>
+              <p class="card-description">
+                Dirección: Calle Principal de Unare II, al lado de la Escuela Fe
+                y Alegría Virgen Niña, Puerto Ordaz, Estado Bolívar.
+              </p>
+              <p class="card-description">Teléfono: +58 286-0000001</p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">📍Sucursal Alta Vista</h3>
+              <p class="card-description">
+                Dirección: Avenida Las Américas, C.C. Orinokia Mall, Nivel
+                Feria, Puerto Ordaz, Estado Bolívar.
+              </p>
+              <p class="card-description">Teléfono: +58 286-0000002</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="pago" class="main-section">
+          <h2 class="subtitle">Métodos de pago</h2>
+
+          <div class="card-container bg-banner">
+            <article class="content">
+              <h3 class="card-title">💰 Efectivo</h3>
+              <p class="card-description">Paga al recibir tu pedido.</p>
               <p></p>
-            </li> -->
-            <!-- <li>
-              <img src="" alt="">
-              <h2></h2>
-              <p>Panaderías vecinas para canje y promoción cruzada.</p>
-            </li> -->
-        </ul>
-    </section>
+            </article>
+            <article class="content">
+              <h3 class="card-title">📱 Pago móvil (BDV)</h3>
+              <p class="card-description">Banco: Banco de Venezuela</p>
+              <p class="card-description">Teléfono: 0414-1234567</p>
+              <p class="card-description">Cédula/RIF: V-12345678-9</p>
+              <p class="card-description">Nombre: Maljut Pizzas C.A.</p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">🏦 Transferencia bancaria</h3>
+              <p class="card-description">Banco: Banco de Venezuela</p>
+              <p class="card-description">Cuenta: 0102-0123-4567-8910-1234</p>
+              <p class="card-description">Nombre: Maljut Pizzas C.A.</p>
+              <p class="card-description">RIF: J-12345678-9</p>
+              <p class="card-description">Correo: pagos@maljutpizzas.com</p>
+            </article>
+            <article class="content">
+              <h3 class="card-title">💲 Divisas (USD)</h3>
+              <p class="card-description">
+                Aceptamos billetes en buen estado al tipo de cambio del día.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+      <button id="whatsApp_Button" onclick="">
+        <img src="./src/svg/whatsApp.svg" alt="whatsApp" />
+      </button>
 
-    <!-- <section id="weDo_Section">
-        <h2>Nos encargamos de:</h2>
-        <ul id="weDo_List">
-            <li>
-              <img src="./src/svg/pizza_logo.svg" alt="Logo de una pizza">
-              <p>Preparación y venta de pizzas en ambas sedes</p>
-            </li>
-            <li>
-              <img src="./src//svg/cocina.svg" alt="cubiertos">
-              <p>Logística local y cocina</p>
-            </li>
-            <li>
-              <img src="./src/svg/delivery.svg" alt="Logo de un camion">
-              <p>Gestión y entrega de pedidos</p>
-            </li>
-            <li>
-              <img src="./src/svg/social.svg" alt="Logo de un parlante">
-              <p>Administración de redes y diseño de promociones</p>
-            </li>
-            <li>
-              <img src="./src/svg/partnert Exchange.svg" alt="Logo de un apreton de manos">
-              <p>Negociación con proveedores y control de inventario</p>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Atendemos por:</h2>
-        <ul>
-            <li>
-              <img src="" alt="">
-              @maljutpizzas
-            </li>
-            <li>
-              <img src="" alt="">
-              WhatsApp Business
-            </li>
-            <li>
-              <img src="" alt="">
-              Delivery
-            </li>
-        </ul>
-    </section> -->
-  </main>
-  <button id="whatsApp_Button" onclick="">
-    <img src="./src/svg/whatsApp.svg" alt="whatsApp">
-  </button>
-  <footer>
-    <p>Derechos reservados</p>
-  </footer>
+      <footer>
+        <p>&copy; 2025 Todos los derechos reservados</p>
+      </footer>
+    </div>
+  </body>
   <script src="index.js"></script>
-</body>
 </html>
