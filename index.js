@@ -1,0 +1,1 @@
+const whatsApp_Button = document.getElementById('whatsApp_Button')

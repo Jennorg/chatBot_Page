@@ -1,0 +1,67 @@
+* {
+  font-family: Roboto, Arial, Helvetica;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  width: 100dvw;
+  min-height: 10dvh;
+  max-height: 150px;
+  padding: 15px;
+  background-color: #25D366;
+}
+
+header * {
+  color: #075E54;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 5;
+  place-items: Top;
+  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #fff;
+}
+
+main {
+  column-span: all;
+  padding: 30px;
+}
+
+main * {
+  padding: 10px;
+}
+
+main h2 {
+  font-weight: bold;
+  font-size:x-large;
+  color: #075E54;
+}
+
+#whatsApp_Button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+#whatsApp_Button:hover {  
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+#whatsApp_Button img {
+  width: 4.5rem;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+}
+
+footer p{
+  font-size: small;
+}
