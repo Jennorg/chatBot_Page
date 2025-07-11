@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maljut Pizzas</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="./src/assets/logo.ico" />
     <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/06/09/22/20250609222426-W6PSF7ZE.js"></script>
   </head>
@@ -12,7 +13,7 @@
     <div class="wrapper">
       <header class="hero">
         <h1>
-          Bienvenido a <span class="title">Maljut Pizzas</span>, donde la pizza
+          Bienvenido a <span class="title">Maljut Pizzas</span> donde la pizza
           sabe mejor
         </h1>
       </header>
@@ -24,8 +25,8 @@
             <li><a class="item" href="#promociones">Promociones</a></li>
             <li><a class="item" href="#sucursales">Sucursales</a></li>
             <li><a class="item" href="#pago">Métodos de Pago</a></li>
-            <li><a class="item" href="#">Sobre nosotros</a></li>
-            <li><a class="item" href="#">Contacto</a></li>
+            <!-- <li><a class="item" href="#">Sobre nosotros</a></li>
+            <li><a class="item" href="#">Contacto</a></li> -->
           </ul>
         </nav>
 
@@ -296,9 +297,36 @@
           </div>
         </section>
       </main>
-      <a id="whatsApp_Button" href="https://wa.me/+584147677439">
-        <img src="./src/svg/whatsApp.svg" alt="whatsApp" />
-      </a>
+      <!-- Chatbot Container -->
+      <div id="chatbot-container" class="chatbot-container">
+        <!-- Chatbot Toggle Button -->
+        <button id="chatbot-toggle" class="chatbot-toggle">
+          <img src="./src/svg/whatsApp.svg" alt="Chat" class="chatbot-icon" />
+          <span class="chatbot-label">¿Necesitas ayuda?</span>
+        </button>
+        
+        <!-- Chatbot Window -->
+        <div id="chatbot-window" class="chatbot-window">
+          <div class="chatbot-header">
+            <h3>Maljut Pizzas - Asistente</h3>
+            <button id="chatbot-close" class="chatbot-close">×</button>
+          </div>
+          <div id="chatbot-messages" class="chatbot-messages">
+            <!-- Los mensajes del chatbot se insertarán aquí -->
+          </div>
+          <div class="chatbot-input">
+            <input type="text" id="chatbot-input-field" placeholder="Escribe tu mensaje..." />
+            <button id="chatbot-send" class="chatbot-send" title="Enviar mensaje">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+              </svg>
+            </button>
+            <a href="https://wa.me/+584147677439" target="_blank" id="chatbot-whatsapp" class="chatbot-whatsapp" title="Chat directo en WhatsApp">
+              <img src="./src/svg/whatsApp.svg" alt="WhatsApp" />
+            </a>
+          </div>
+        </div>
+      </div>
 
       <footer>
         <p>&copy; 2025 Todos los derechos reservados</p>
