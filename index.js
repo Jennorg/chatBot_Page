@@ -37,31 +37,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
   chatbotClose.addEventListener('click', closeChat);
 
-  chatbotInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-          sendMessage();
-      }
-  });
+  // Configuración de Botpress Cloud
+  const BOT_ID = "BOT_ID"; 
+  const API_URL = `https://bots.botpress.cloud/v1/chat/${BOT_ID}`;
+  const API_KEY = "API_KEY"; 
+  let conversationId = null; // Para mantener el contexto de la conversación
 
-  chatbotSend.addEventListener('click', sendMessage);
+  // Función para enviar mensaje y obtener respuesta del bot
+  async function sendToBotpress(userMessage) {
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${API_KEY}`
+      },
+      body: JSON.stringify({
+        type: "text",
+        text: userMessage,
+        conversationId: conversationId || undefined
+      })
+    });
+    const data = await res.json();
+    // Guarda el conversationId para mantener el contexto
+    if (data.conversationId) conversationId = data.conversationId;
+    // El mensaje del bot está en data.responses[0].payload.text
+    return data.responses?.[0]?.payload?.text || "Sin respuesta del bot";
+  }
 
-  function sendMessage() {
-      const message = chatbotInput.value.trim();
-      if (message) {
-          addMessage('user', message);
-          chatbotInput.value = '';
+  // Reemplaza la función sendMessage por una versión async
+  async function sendMessage() {
+    const message = chatbotInput.value.trim();
+    if (message) {
+      addMessage('user', message);
+      chatbotInput.value = '';
 
-          setTimeout(() => {
-              const responses = [
-                  '¡Gracias por tu mensaje! Te ayudo con información sobre nuestros productos.',
-                  '¿Te gustaría conocer nuestras promociones especiales?',
-                  'Puedo ayudarte con el menú, promociones o información de contacto.',
-                  '¿Necesitas ayuda con el pedido o tienes alguna pregunta específica?'
-              ];
-              const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-              addMessage('bot', randomResponse);
-          }, 1000);
-      }
+      // Llama a Botpress y muestra la respuesta real
+      const botReply = await sendToBotpress(message);
+      addMessage('bot', botReply);
+    }
   }
 
   function addMessage(sender, text) {
